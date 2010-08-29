@@ -1,0 +1,42 @@
+#summary Setting up bootable media
+
+= Introduction =
+
+To fire up Linux on your tablet, you're gonna need a bootable Micro SD Card with two partitions, set up a follows:
+
+= Details =
+
+== Partitioning ==
+
+Your card needs to be set up with a DOS boot block and specific geometry, as follows:
+
+  * Number of heads : 255
+  * Number of Sectors : 63
+
+You'll need two partitions, one (small) bootable FAT32 partition (fdisk type 'c') and the rest allocated to a 'linux' type partition.  Full details on setting this up from a Linux box can be found here : http://pixhawk.ethz.ch/tutorials/omap/boot_from_sd_sdhc
+
+== Formatting ==
+
+Format the DOS partition with mkfs.msdos, don't forget to specify FAT32 (-F 32).  Format the Linux partition EXT3.
+
+== Boot files ==
+
+You need to be *very* careful about the order in which you copy files onto the card, especially on the DOS partition.  The first file copied *absolutely must* be 'mlo'.  If you accidentally copy something else on there, or (for example) try formatting the card under OSX or even letting it mount under OSX, you'll end up with an unbootable card.  So don't do that, mmmmkay?
+
+The other files you need on the boot partition are 'mmcuboot.bin' and a kernel image file, uImage.
+
+== Linux files ==
+
+Best plan is to use Narcissus to build a filesystem tarball, and then unexpand that, in place, onto the linux partition.  Generally speaking, that looks something like this (assuming your linux filesystem is mounted on /mnt/media)
+{{{
+tar -xjpf $PATH_TO_NARCISSUS_IMAGE -C /mnt/media
+}}}
+The j option is because Narcissus delivers you a bzipped tarball, and the p keeps permissions.
+
+== Booting ==
+
+If you have a SerialConsole, hook it up.
+
+Power on, holding down the "volume down" key on the A81E, or pressing the "reflash" button on the A81. 
+
+Hopefully, you got a linux.
