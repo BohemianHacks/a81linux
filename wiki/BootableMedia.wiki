@@ -25,7 +25,7 @@ You need to be *very* careful about the order in which you copy files onto the c
 
 The other files you need on the boot partition are 'mmcuboot.bin' and a kernel image file, uImage.
 
-mlo and mmcuboot.bin are available from the 'files' section as FilesForBooting.zip
+mlo and mmcuboot.bin are available from the 'Downloads' part of this site as FilesForBooting.zip
 
 == Linux files ==
 
