@@ -25,6 +25,8 @@ You need to be *very* careful about the order in which you copy files onto the c
 
 The other files you need on the boot partition are 'mmcuboot.bin' and a kernel image file, uImage.
 
+mlo and mmcuboot.bin are available from the 'files' section as FilesForBooting.zip
+
 == Linux files ==
 
 Best plan is to use Narcissus to build a filesystem tarball, and then unexpand that, in place, onto the linux partition.  Generally speaking, that looks something like this (assuming your linux filesystem is mounted on /mnt/media)
