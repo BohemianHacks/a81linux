@@ -1,0 +1,21 @@
+#How to set up a serial port for the Wits A81/A81E
+
+= Introduction =
+
+There are 2 ways
+a) Open up the tablet, solder 4 wires onto the RS232 pads to get 1.8V TTL output
+b) Tap the USB B port to get 1.8V TTL output
+
+
+= Details =
+
+*a) Open up the tablet*
+
+
+
+*b) USB Port*
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
