@@ -3,8 +3,8 @@
 = Introduction =
 
 There are 2 ways
-a) Open up the tablet, solder 4 wires onto the RS232 pads to get 1.8V TTL output
-b) Tap the USB B port to get 1.8V TTL output
+  a) Open up the tablet, solder 4 wires onto the RS232 pads to get 1.8V TTL output
+  b) Tap the USB B port to get 1.8V TTL output
 
 
 = Details =
