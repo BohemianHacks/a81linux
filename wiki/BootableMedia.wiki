@@ -37,8 +37,14 @@ The j option is because Narcissus delivers you a bzipped tarball, and the p keep
 
 == Booting ==
 
-If you have a SerialConsole, hook it up.
+If you have a SerialPort, hook it up.  Serial format will most likely be 115200bps, 8 bits, no stop bit.  The easiest way to monitor a serial port on a *n*x box is using *screen*, as follows
+
+{{{
+screen /dev/tty.my_serial_hookup 115200
+}}}
+
+That will give you a terminal interface direct to your serial port, no additional software required. ctrl-a 'h' for help, and of course 'man screen'. 
 
 Power on, holding down the "volume down" key on the A81E, or pressing the "reflash" button on the A81. 
 
-Hopefully, you got a linux.
+Hopefully, you got a linux.  If not, you should at least get some serial output.
