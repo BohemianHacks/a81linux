@@ -11,7 +11,7 @@ There are 2 ways
 
 *# Open up the tablet*
   
-  http://code.google.com/p/a81linux/source/browse/wiki/A81_SERIAL.JPG
+  http://a81linux.googlecode.com/svn/wiki/A81_SERIAL.JPG
 
   On the right side of the PCB above the cut portion (where a USB A Female connector fits) you'll find 4 pads. From top to bottom they're
  
