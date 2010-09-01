@@ -1,0 +1,12 @@
+#Hardware in the Tablet.
+ 
+This is the list of the main components in the tablet :-
+
+ # Processor - OMAP 3530
+ # Memory - Micron LP DDR
+ # Display - 7" 800x480 ChunghWa CLAA070LCOCHW
+ # Wifi and Bluetooth - Jorjin WG7310-00 (based on the twl 1270)
+ # GPS - UBlox GPX 5010-ST
+ # Touch Screen Controller TI TSC 2046I - Serial, SPI (Same pinout as ADS 7846). Has Touch Pressure Measurement
+ # Audio Codec - Cirrus 43L22CNZ Portable Audio DAC with Integrated Class D Speaker Drive
+ # TI 91 206W Chip
