@@ -9,13 +9,13 @@ There are 2 ways
 
 = Details =
 
-*a) Open up the tablet*
+*# Open up the tablet*
+  
+  On the right side of the PCB above the cut portion (where a USB A Female connector fits) you'll find 4 pads. From top to bottom they're
+ 
+ # Rx
+ # Tx
+ # Gnd
+ # 1.8v
 
-
-
-*b) USB Port*
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+*# USB Port*
