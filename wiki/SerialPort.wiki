@@ -21,3 +21,13 @@ There are 2 ways
  # 1.8v
 
 *# USB Port*
+
+ From what we know as of now the serial port is also available off the USB B port on the A81E like so :-
+
+  GND on pin 5 (USB GND)
+  TXD on pin 4 (USB ID)
+  RXD on pin 3 (USB D+)
+
+  All at 1.8v TTL levels. 
+
+ (Can someone confirm this? I couldn't get this to work - while Simon could. Might be my breadboard FTDI circuit.)
