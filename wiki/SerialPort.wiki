@@ -20,6 +20,15 @@ There are 2 ways
  # Gnd
  # 1.8v
 
+= Newer Batches of A81E =
+I think there is little change in newer production batches PCB, as shown below. Now they don't print the details of RS232 Pins but still they have the same sequence as shown above i.e. starting from top pin (near to earphone jack), we have
+
+ # Rx
+ # Tx
+ # Gnd
+ # 1.8v
+
+
 *# USB Port*
 
  From what we know as of now the serial port is also available off the USB B port on the A81E like so :-
