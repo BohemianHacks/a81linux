@@ -20,14 +20,14 @@ There are 2 ways
  # Gnd
  # 1.8v
 
-= Newer Batches of A81E =
+*# Newer Batches of A81E *
 I think there is little change in newer production batches PCB, as shown below. Now they don't print the details of RS232 Pins but still they have the same sequence as shown above i.e. starting from top pin (near to earphone jack), we have
 
  # Rx
  # Tx
  # Gnd
  # 1.8v
-
+http://picasaweb.google.com/lh/photo/iIgTZRcfnPSCaNaiY5b6jw?feat=directlink
 
 *# USB Port*
 
