@@ -29,6 +29,8 @@ I think there is little change in newer production batches PCB, as shown below. 
  # 1.8v
 http://picasaweb.google.com/lh/photo/iIgTZRcfnPSCaNaiY5b6jw?feat=directlink
 
+In order to use FTDI Basic board (sku: DEV-08772 and not the latest DEV-10009) you must cut the track on backside of the board between center pad and pad towards your right side (I will update with pics later). then you can use 1.8v from a81e use this usb to rs232 converter. 
+
 *# USB Port*
 
  From what we know as of now the serial port is also available off the USB B port on the A81E like so :-
