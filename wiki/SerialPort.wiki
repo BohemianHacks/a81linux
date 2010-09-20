@@ -27,7 +27,7 @@ I think there is little change in newer production batches PCB, as shown below. 
  # Tx
  # Gnd
  # 1.8v
-http://picasaweb.google.com/lh/photo/iIgTZRcfnPSCaNaiY5b6jw?feat=directlink
+http://a81linux.googlecode.com/svn/wiki/A81e.JPG
 
 In order to use FTDI Basic board (sku: DEV-08772 and not the latest DEV-10009) you must cut the track on backside of the board between center pad and pad towards your right side (I will update with pics later). then you can use 1.8v from a81e use this usb to rs232 converter. 
 
