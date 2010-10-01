@@ -9,4 +9,4 @@ This is the list of the main components in the tablet :-
  # GPS - UBlox GPX 5010-ST
  # Touch Screen Controller TI TSC 2046I - Serial, SPI (Same pinout as ADS 7846). Has Touch Pressure Measurement
  # Audio Codec - Cirrus 43L22CNZ Portable Audio DAC with Integrated Class D Speaker Drive
- # TI 91 206W Chip
+ # TI 91 206W Chip -  TI BQ24073 USB-Friendly Li-Ion Battery Charger and Power-Path Management IC, Vout 4.4V
