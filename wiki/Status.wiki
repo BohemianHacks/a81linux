@@ -1,13 +1,27 @@
-#summary One-sentence summary of this page.
+#labels status
+#Current Status.
 
 = Introduction =
 
-Add your content here.
+We have the following kernels available for running Linux on the device :-
+
+ * Wits linux image - kernel 2.6.29
+ * Wits android image - kernel 2.6.32
+ * TI OMAP kernel tree - kernel 2.6.35
+ * Mainline kernel
+(add more relevant ones here)
+
+To boot the kernel X-Loader and u-boot are required too.
+
+The MLO (X-loader) and u-boot combination that came with Wits linux image v2.6.29 kernel can boot only v 2.6.29 and v2.6.32.
+
+The android images come with their own MLO and u-boot that generally boot the kernel from NAND.
 
 
 = Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+Currently
+
+  * Simon and avionion are trying to get a custom MLO and u-boot combination going. They've got a version that boots any kernel but are stuck at getting the LCD to init.
+  * I'm trying to get wifi working with any kernel. I'm stuck trying to get the TI kernel to compile cleanly.
+  * Arlen already has an enlightenment based rootfs ready. Works fine with the android kernel, MLO and u-boot.
