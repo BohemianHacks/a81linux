@@ -46,8 +46,11 @@ In order to use FTDI Basic board (sku: DEV-08772 and not the latest DEV-10009) y
 *# Andrew's USB Port Serial*
 As mentioned in comments I've had the usb port serial working with a flipped mini usb plug. The serial port is on pins 6-10 of the 10 pin mini usb port, so a normal mini usb cable wont access them. If a mini usb plug is disassembled and the pins insert trimmed and replaced upside down in the meta shielding the plug will work to access the serial pins.
 Here's a pic of my modified plug next to a normal one:
+
 (to come)
+
 If you're lucky enough to find a 10 pin mini usb plug as one user managed to (on ebay) then you can avoid the modding and just figure out which pins to use directly.
 
 And the basic schematic of the ftdi interface I use to communicate with it (with basic voltage protection for the a81's rx line):
+
 (to come)
