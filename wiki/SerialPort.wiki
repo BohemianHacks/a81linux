@@ -53,4 +53,4 @@ If you're lucky enough to find a 10 pin mini usb plug as one user managed to (on
 
 And the basic schematic of the ftdi interface I use to communicate with it (with basic voltage protection for the a81's rx line):
 
-(to come)
+(to come... once I figure out how to upload images, have to wait to get home and use svn)
