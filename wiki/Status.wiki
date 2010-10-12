@@ -9,7 +9,7 @@ We have the following kernels available for running Linux on the device :-
  * Wits android image - kernel 2.6.32
  * TI OMAP kernel tree - kernel 2.6.35
  * Mainline kernel
-(add more relevant ones here)
+ * (add more relevant ones here)
 
 To boot the kernel X-Loader and u-boot are required too.
 
