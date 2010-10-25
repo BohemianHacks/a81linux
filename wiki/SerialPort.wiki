@@ -54,3 +54,8 @@ If you're lucky enough to find a 10 pin mini usb plug as one user managed to (on
 And the basic schematic of the ftdi interface I use to communicate with it (with basic voltage protection for the a81's rx line):
 
 http://a81linux.googlecode.com/svn/wiki/Serial_Ftdi_Interface.png
+
+*Comment from simon*
+Ah, that makes a great deal of sense, and explains why others haven't been able to get serial off the USB.  I hadn't even thought that the plug might be different.  This also opens the opportunity for an adventurous hacker to create dual usb/serial frankendongle.
+
+I need to get myself a 1.8v-ttl level converter, so I can hook up the iPaq stowaway keyboard I have gathering dust on my desk.
