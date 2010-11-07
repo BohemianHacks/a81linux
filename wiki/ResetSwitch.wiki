@@ -1,0 +1,40 @@
+#How to add a reset switch to the Wits A81E
+
+= Introduction =
+
+  The A81 came with a reset switch, whereas the E update left this out. If you're doing a reasonable amount of development you're likely to get sick of power cycling the device all the time, either by pulling th battery in and out, or by leaving battery out and using just the power cable.
+  This was even more of a hassle for me as I've added a bluetooth serial module to get easy serial connection, but power cycling to reset also reset my bluetooth module, slowing things down badly.
+
+= Disclaimer =
+
+  Pretty much more than any other thing on this site, this reset mod is the least tested and most possible to cause damage. While the mod has worked well for me so far I have no way of knowing for certain what type of reset it is nor whether the reset is overloading an output pin on either the main processor or the power management chip. Hence this reset may be degrading one of these parts. As such neither I nor anyone else involved with this project can be held responsible for any adverse outcomes from attempting to install or through use of this mod. You have been warned.
+  
+= Details =
+
+  That begin said, I find the mode far too convenient to worry too much about the potential damage, and have seen no ill effects so far.
+
+*# Background*
+
+  The A81-E unit I have appears to have pcb locations for all the reset hardware, however I was unsuccessful in tracing this fully to definitely achieve a safe reset. It starts with a small 3 pad place next to the sd slot for a right angle switch. This lines up with the small hole in the case to insert paperclip etc.
+  This switch would be used to short the two outside pads, the tracks for which go to a group of unpopulated parts near the speaker wire connectors:
+  
+  http://a81linux.googlecode.com/svn/wiki/Reset_original_unpopulated.JPG
+  
+  The outlined parts (resistors...?) are where the traces initially go. The other end of one of them appears to goes straight to 1.8V rail, the other one I don't know. I would have guessed a transistor base somewhere but it didn't appear to go to the transistor space next to it so I'm not sure. This is as far as I got with this direction.
+  
+*# My Mod Details*
+  Investigation of the Power Mangement chip (tps65920) showed that it is normally in charge of sequencing resets with the main processor (omap3530). Looking up the reference reset circuitry and cross referencing it with EVM and beagleboard schematics gave a pretty similar layout to look for. Either way I found a testpoint that is tracked to a via near where I'd expect to find one to go to the NRESPWRON pin of the tps65920. This testpoint also had a 4.7K up to 1.8V as expected, and tracked to a shorting resistor going to the omap. The NRESPWRON pin is an input to the tps that triggers a reset of the chip, which should then causes a reset of the omap. I don't have any way to know for sure that this testpoint is going to the NRESPWRON pin (without an xray machine) but I gave it a go, and shorting it to ground sends the screen white for about a second, before the device switches off. This suggests to me some kind of safe timed shutdown, so I decided to stick with it.
+  http://a81linux.googlecode.com/svn/wiki/Reset_testpoint.JPG
+
+*# Implementation*
+  This reset requires the tespoint to be shorted to ground. I found the point on the top side of board that the testpoint goes to, the ends of a couple of side by side resistors. It's better to solder a wire on here otherwise it'll get in the way of the lcd.
+  http://a81linux.googlecode.com/svn/wiki/Reset_wire_attach.JPG
+  Look at the red arrow'd wire, it's soldered to two parts. They're already connected, so don't worry about bridging them with solder. Ignore the other wires, they're just part of my bluetooth module.
+  
+  Then you'll need a switch. I happenned to have a low profile pushbutton I decided to use, it doesn't really fit the space properly, but it was close enough. You can use any kind of switch mounted anywhere, all it needs to do is connect the wire to ground. If anyone finds a part that fits the proper pads let me know and I'll add it's info here.
+  http://a81linux.googlecode.com/svn/wiki/Reset_switch_front.JPG
+  http://a81linux.googlecode.com/svn/wiki/Reset_assembled_back.JPG
+  One of the pins of the switch goes straight to a spare grounded pad, and the wire connected to the resistors goes to the other pin (it comes through an empty hole from the other side of the board).
+  You need to ensure you don't have anything thicker than the plastic plate too far from the outside of the case, or it'll hit the lcd. Where my switch is with the wire brackets holding it is pretty much borderline.
+  
+  Andrew
