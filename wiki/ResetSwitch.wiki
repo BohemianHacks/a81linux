@@ -1,4 +1,4 @@
-#How to add a reset switch to the Wits A81E
+*#How to add a reset switch to the Wits A81E*
 
 = Introduction =
 
@@ -32,8 +32,10 @@
   Look at the red arrow'd wire, it's soldered to two parts. They're already connected, so don't worry about bridging them with solder. Ignore the other wires, they're just part of my bluetooth module.
   
   Then you'll need a switch. I happenned to have a low profile pushbutton I decided to use, it doesn't really fit the space properly, but it was close enough. You can use any kind of switch mounted anywhere, all it needs to do is connect the wire to ground. If anyone finds a part that fits the proper pads let me know and I'll add it's info here.
+
   http://a81linux.googlecode.com/svn/wiki/Reset_switch_front.jpg
   http://a81linux.googlecode.com/svn/wiki/Reset_assembled_back.jpg
+
   One of the pins of the switch goes straight to a spare grounded pad, and the wire connected to the resistors goes to the other pin (it comes through an empty hole from the other side of the board).
   You need to ensure you don't have anything thicker than the plastic plate too far from the outside of the case, or it'll hit the lcd. Where my switch is with the wire brackets holding it is pretty much borderline.
   
