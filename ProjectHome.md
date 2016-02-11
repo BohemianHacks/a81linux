@@ -1,0 +1,1 @@
+A repository for patches, hints and tips on getting a linux distro up and running on the Witstech A81 and A81E mobile internet devices.

@@ -1,0 +1,61 @@
+#How to set up a serial port for the Wits A81/A81E
+
+# Introduction #
+
+There are 2 ways
+  1. Open up the tablet, solder 4 wires onto the RS232 pads to get 1.8V TTL output
+  1. Tap the USB B port to get 1.8V TTL output
+
+
+# Details #
+
+**# Open up the tablet**
+
+> http://a81linux.googlecode.com/svn/wiki/A81_SERIAL.JPG
+
+> On the right side of the PCB above the cut portion (where a USB A Female connector fits) you'll find 4 pads. From top to bottom they're
+
+  1. Rx
+  1. Tx
+  1. Gnd
+  1. 1.8v
+
+**# Newer Batches of A81E**
+I think there is little change in newer production batches PCB, as shown below. Now they don't print the details of RS232 Pins but still they have the same sequence as shown above i.e. starting from top pin (near to earphone jack), we have
+
+  1. Rx
+  1. Tx
+  1. Gnd
+  1. 1.8v
+http://a81linux.googlecode.com/svn/wiki/A81e.JPG
+
+In order to use FTDI Basic board (sku: DEV-08772 and not the latest DEV-10009) you must cut the track on backside of the board between center pad and pad towards your right side (I will update with pics later). then you can use 1.8v from a81e use this usb to rs232 converter.
+
+**# USB Port**
+
+> From what we know as of now the serial port is also available off the USB B port on the A81E like so :-
+
+> GND on pin 5 (USB GND)
+> TXD on pin 4 (USB ID)
+> RXD on pin 3 (USB D+)
+
+> All at 1.8v TTL levels.
+
+> (Can someone confirm this? I couldn't get this to work - while Simon could. Might be my breadboard FTDI circuit.)
+
+**# Andrew's USB Port Serial**
+As mentioned in comments I've had the usb port serial working with a flipped mini usb plug. The serial port is on pins 6-10 of the 10 pin mini usb port, so a normal mini usb cable wont access them. If a mini usb plug is disassembled and the pins insert trimmed and replaced upside down in the meta shielding the plug will work to access the serial pins.
+Here's a pic of my modified plug next to a normal one:
+
+![http://a81linux.googlecode.com/svn/wiki/Serial_Modified_USB_Plug.jpg](http://a81linux.googlecode.com/svn/wiki/Serial_Modified_USB_Plug.jpg)
+
+If you're lucky enough to find a 10 pin mini usb plug as one user managed to (on ebay) then you can avoid the modding and just figure out which pins to use directly.
+
+And the basic schematic of the ftdi interface I use to communicate with it (with basic voltage protection for the a81's rx line):
+
+![http://a81linux.googlecode.com/svn/wiki/Serial_Ftdi_Interface.png](http://a81linux.googlecode.com/svn/wiki/Serial_Ftdi_Interface.png)
+
+**Comment from simon**
+Ah, that makes a great deal of sense, and explains why others haven't been able to get serial off the USB.  I hadn't even thought that the plug might be different.  This also opens the opportunity for an adventurous hacker to create dual usb/serial frankendongle.
+
+I need to get myself a 1.8v-ttl level converter, so I can hook up the iPaq stowaway keyboard I have gathering dust on my desk.
